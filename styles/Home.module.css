@@ -114,3 +114,7 @@
     flex-direction: column;
   }
 }
+
+.infoNotiBar {
+  background-color: black;
+}
