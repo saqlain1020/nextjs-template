@@ -29,7 +29,11 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 // }
 
 let theme = createTheme({
-  palette: {},
+  palette: {
+    secondary: {
+      main: "#ff9800",
+    },
+  },
   breakpoints: {
     values: {
       xs: 0,

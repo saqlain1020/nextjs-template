@@ -1,17 +1,21 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
-import { Theme, Button } from "@mui/material";
+import { makeStyles } from "tss-react/mui";
+import { Button } from "@mui/material";
 import useModal from "hooks/useModal";
 import useNotify from "hooks/useNotify";
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {},
+const useStyles = makeStyles()((theme) => ({
+  root: {
+    border: "1px solid grey",
+    padding: 30,
+    background: theme.palette.secondary.main,
+  },
 }));
 
 interface Props {}
 
 const index: React.FC<Props> = () => {
-  const classes = useStyles();
+  const { classes } = useStyles();
   const { openModal } = useModal();
   const [key, setKey] = React.useState<string | number>("");
   const { notifySuccess, notifyError, notifyLoading, dismissNotify, dismissNotifyAll } = useNotify();
